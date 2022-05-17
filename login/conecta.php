@@ -1,8 +1,7 @@
 <?php 
      $servidor="localhost";
-     $usuario="usuario";
+     $usuario="root";
      $senhabd="ifsp";
      $bd = "banco";
 
-     @ $conexao = mysqli_connect($servidor, $usuario, $senhabd, $bd);
-     if (!$conexao) die("Falha na conexão ao BD");
+     $conexao = mysqli_connect($servidor, $usuario, $senhabd, $bd) or die("Falha na conexão ao BD");

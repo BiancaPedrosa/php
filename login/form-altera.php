@@ -1,21 +1,12 @@
 <?php
 include "cabecalho.php";
+include "conecta.php";
 
 $login =  $_POST['login'];
 $senha =  $_POST['senha'];
-if(!$login || !$senha)
-{
-    die( "Faltam dados usuário e/ou senha!");
-}
-@ $con = mysqli_connect('localhost', 'root', 'root');
-if (!$con)
-{
-     die("Falha na conexão ao BD");
-}
-mysqli_select_db($con,'banco');
-$sql = "SELECT  login, senha
-            FROM tabela
-                WHERE login = '$login' AND senha=md5('$senha')";
+
+$sql = "SELECT  login, senha FROM tabela
+        WHERE login = '$login' AND senha=md5('$senha')";
         
 $resultado = mysqli_query($con,$sql) or die("Erro no banco de dados!");
 $num_resultados = mysqli_num_rows($resultado);

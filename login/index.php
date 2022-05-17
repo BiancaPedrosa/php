@@ -10,11 +10,11 @@
 					<form method="post"  class="form">
 						<div class="form-group">
 							<label class="text-info">Login</label>
-							<input type="email" name="login" size="70" maxlength="70" class="form-control" />
+							<input type="email" name="login" size="70" maxlength="70" class="form-control" required />
 						</div>
 						<div class="form-group">
 							<label class="text-info">Senha</label>
-							<input class="form-control" type="password" name="senha" maxlength="50" />
+							<input class="form-control" type="password" name="senha" maxlength="50" required />
 						</div>
 						<div class="form-group">
 							<input class="btn btn-info btn-md" type="submit" value="Entrar" formaction="autentica.php"/>
