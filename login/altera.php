@@ -1,5 +1,6 @@
 <?php
 include "cabecalho.php";
+include "conecta.php";
 
 $login =  $_POST['login'];
 $senha =  $_POST['senha'];
